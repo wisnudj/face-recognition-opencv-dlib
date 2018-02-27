@@ -12,7 +12,7 @@ detector = dlib.get_frontal_face_detector()
 
 def face_extractor(image):
 
-  image = imutils.resize(image, width=500)
+  # image = imutils.resize(image, width=800)
   gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
 
   #temukan wajah
@@ -35,7 +35,7 @@ cap = cv.VideoCapture(0)
 count = 0
 
 # dapatkan 30 foto dari camera
-while count <= 30:
+while True:
 
   ret, frame = cap.read()
 
