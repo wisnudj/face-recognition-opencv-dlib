@@ -13,7 +13,7 @@ for i, files in enumerate(only_files_wisnu):
     image_path = data_path_wisnu + only_files_wisnu[i]
     images = cv.imread(image_path, cv.IMREAD_GRAYSCALE)
     training_datas_wisnu.append(np.asarray(images, dtype=np.uint8))
-    labels_wisnu.append('wisnu')
+    labels_wisnu.append(i)
 
 labels_wisnu = np.asarray(labels_wisnu, dtype=np.int32)
 
